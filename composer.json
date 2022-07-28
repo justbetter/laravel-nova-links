@@ -1,0 +1,35 @@
+{
+    "name": "justbetter/laravel-nova-links",
+    "description": "Easily add a links section to your Laravel Nova application",
+    "type": "package",
+    "license": "MIT",
+    "homepage": "https://github.com/justbetter/laravel-nova-links",
+    "authors": [
+        {
+            "name": "Ramon Rietdijk",
+            "email": "ramon@justbetter.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^8.0 || ^9.0",
+        "laravel/nova": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JustBetter\\NovaLinks\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "repositories": {
+        "nova": {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
