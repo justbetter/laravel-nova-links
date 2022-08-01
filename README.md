@@ -6,9 +6,10 @@ Gives you access to easily add (external) links into Laravel Nova's menu.
 
 Our major version corresponds to the major Nova version.
 
-| Package version  | Nova version |
-|------------------|--------------|
-| `^4.0`           | `^4.0`       |
+| Package version | Nova version |
+|-----------------|--------------|
+| `^4.0`          | `^4.0`       |
+| `^1.0`          | `^4.0`       |
 
 ## Installation
 
@@ -36,3 +37,20 @@ public function tools(): array
     ];
 }
 ```
+
+## Contributing
+
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+
+## Security Vulnerabilities
+
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+
+## Credits
+
+- [Ramon Rietdijk](https://github.com/ramonrietdijk)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
