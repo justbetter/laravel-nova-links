@@ -9,6 +9,9 @@ use Laravel\Nova\Tool;
 
 class LinksTool extends Tool
 {
+    /**
+     * @param  array<string, string>  $links
+     */
     public function __construct(
         protected string $name = 'Links',
         protected string $icon = 'link',

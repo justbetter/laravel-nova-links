@@ -13,13 +13,33 @@
     ],
     "require": {
         "php": "^8.0",
-        "laravel/framework": "^8.0 || ^9.0",
+        "laravel/framework": "^9.0",
         "laravel/nova": "^4.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.1",
+        "nunomaduro/larastan": "^2.1",
+        "orchestra/testbench": "^7.7"
     },
     "autoload": {
         "psr-4": {
             "JustBetter\\NovaLinks\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JustBetter\\NovaLinks\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan",
+        "style": "pint",
+        "check": [
+            "@test",
+            "@analyse",
+            "@style"
+        ]
     },
     "config": {
         "sort-packages": true
