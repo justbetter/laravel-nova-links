@@ -10,7 +10,7 @@ use Laravel\Nova\Tool;
 class LinksTool extends Tool
 {
     /**
-     * @param  array<string|MenuItem, string>  $links
+     * @param  array<string, string|MenuItem>  $links
      */
     public function __construct(
         protected string $name = 'Links',

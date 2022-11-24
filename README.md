@@ -40,7 +40,6 @@ public function tools(): array
                 ->openInNewTab()
                 ->external()
                 ->path(url('/horizon')),
-
         ]),
     ];
 }
