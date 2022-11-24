@@ -10,7 +10,7 @@ use Laravel\Nova\Tool;
 class LinksTool extends Tool
 {
     /**
-     * @param  array<string, string>  $links
+     * @param  array<string, string|MenuItem>  $links
      */
     public function __construct(
         protected string $name = 'Links',
@@ -23,7 +23,11 @@ class LinksTool extends Tool
     public function menu(Request $request): MenuSection
     {
         $items = collect($this->links)
-            ->map(fn (string $path, string $name): MenuItem => MenuItem::make($name)->path($path)->external())
+            ->map(function (string|MenuItem $path, string $name): MenuItem {
+                return is_a($path, MenuItem::class)
+                    ? $path
+                    : MenuItem::make($name)->path($path)->external();
+            })
             ->toArray();
 
         return MenuSection::make($this->name, $items)

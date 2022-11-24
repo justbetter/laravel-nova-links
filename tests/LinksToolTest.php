@@ -9,7 +9,7 @@ use Laravel\Nova\Menu\MenuItem;
 class LinksToolTest extends TestCase
 {
     /** @test */
-    public function it_can_create_a_links_menu_item(): void
+    public function it_can_create_a_links_menu_item_string(): void
     {
         $links = new LinksTool('::name::', '::icon::', [
             '::link::' => '::url::',
@@ -30,6 +30,27 @@ class LinksToolTest extends TestCase
 
         $this->assertEquals('::link::', $menuItem->name);
         $this->assertEquals('::url::', $menuItem->path);
+        $this->assertTrue($menuItem->external);
+    }
+
+    /** @test */
+    public function it_can_create_a_links_menu_item_menuitem(): void
+    {
+        $links = new LinksTool('::name::', '::icon::', [
+            '::link::' => MenuItem::make('::name::')->external()->openInNewTab()->path('::path::'),
+        ]);
+
+        /** @var Request $request */
+        $request = app(Request::class);
+
+        $menu = $links->menu($request);
+
+        /** @var MenuItem $menuItem */
+        $menuItem = $menu->items->first();
+
+        $this->assertEquals('::name::', $menuItem->name);
+        $this->assertEquals('::path::', $menuItem->path);
+        $this->assertEquals('_blank', $menuItem->target);
         $this->assertTrue($menuItem->external);
     }
 }

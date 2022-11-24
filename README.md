@@ -32,7 +32,14 @@ public function tools(): array
 {
     return [
         LinksTool::make(__('Links'), 'link', [
+            // Pass a simple string for the url
             __('Job Queue') => url('/horizon'),
+
+            // Or you can pass a Nova MenuItem for more flexibility
+            __('Job Queue') => MenuItem::make(__('Job Queue'))
+                ->openInNewTab()
+                ->external()
+                ->path(url('/horizon')),
         ]),
     ];
 }
