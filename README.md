@@ -1,3 +1,7 @@
+<a href="https://github.com/justbetter/laravel-nova-links" title="JustBetter">
+    <img src="art/banner.svg" alt="Banner">
+</a>
+
 # Laravel Nova Links
 
 Gives you access to easily add (external) links into Laravel Nova's menu.
@@ -61,3 +65,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+<a href="https://justbetter.nl" title="JustBetter">
+    <img src="art/footer.svg" alt="JustBetter logo">
+</a>
