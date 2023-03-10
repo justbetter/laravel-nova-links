@@ -24,7 +24,7 @@ class LinksTool extends Tool
     {
         $items = collect($this->links)
             ->map(function (string|MenuItem $path, string $name): MenuItem {
-                return is_a($path, MenuItem::class)
+                return $path instanceof MenuItem
                     ? $path
                     : MenuItem::make($name)->path($path)->external();
             })
