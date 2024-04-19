@@ -1,5 +1,5 @@
 <a href="https://github.com/justbetter/laravel-nova-links" title="JustBetter">
-    <img src="art/banner.svg" alt="Banner">
+    <img src="./art/banner.svg" alt="Package banner">
 </a>
 
 # Laravel Nova Links
@@ -67,5 +67,5 @@ Please review [our security policy](../../security/policy) on how to report secu
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 <a href="https://justbetter.nl" title="JustBetter">
-    <img src="art/footer.svg" alt="JustBetter logo">
+    <img src="./art/footer.svg" alt="Package footer">
 </a>
