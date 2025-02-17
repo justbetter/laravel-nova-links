@@ -1,6 +1,14 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/justbetter/laravel-nova-links/compare/4.4.0...main)
+[Unreleased changes](https://github.com/justbetter/laravel-nova-links/compare/4.5.0...main)
+## [4.5.0](https://github.com/justbetter/laravel-nova-links/releases/tag/4.5.0) - 2025-02-17
+
+### What's Changed
+* Laravel 12 / Nova 5 support by @VincentBean in https://github.com/justbetter/laravel-nova-links/pull/7
+
+
+**Full Changelog**: https://github.com/justbetter/laravel-nova-links/compare/4.4.0...4.5.0
+
 ## [4.4.0](https://github.com/justbetter/laravel-nova-links/releases/tag/4.4.0) - 2024-04-08
 
 ### What's Changed
