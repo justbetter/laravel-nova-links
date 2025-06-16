@@ -1,9 +1,7 @@
 name: style
 
-on:
-    push:
-        branches:
-            - main
+on: ['push', 'pull_request']
+
 jobs:
     style:
         name: Style
@@ -21,14 +19,7 @@ jobs:
                     coverage: none
 
             -   name: Install dependencies
-                env:
-                    COMPOSER_AUTH: '{"http-basic":{"nova.laravel.com":{"username":"${{secrets.NOVA_USERNAME}}","password":"${{secrets.NOVA_PASSWORD}}"}}}'
                 run: composer install
 
             -   name: Style
-                run: composer fix-style
-
-            -   name: Commit Changes
-                uses: stefanzweifel/git-auto-commit-action@v4
-                with:
-                    commit_message: Fix styling changes
+                run: composer style
